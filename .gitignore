@@ -1,0 +1,56 @@
+# --- General ---
+.DS_Store
+Thumbs.db
+*.log
+logs/
+temp/
+tmp/
+.history/
+
+# --- IDEs and Tools ---
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# --- Frontend (Vue.js / Node) ---
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/coverage/
+frontend/*.local
+frontend/.env
+frontend/.env.*
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+
+# --- Backend (Spring Boot / Gradle) ---
+backend/.gradle/
+backend/build/
+backend/bin/
+backend/out/
+backend/.settings/
+backend/.classpath
+backend/.project
+backend/.factorypath
+backend/*.iws
+backend/*.iml
+backend/*.ipr
+backend/application-local.properties
+backend/.env
+backend/HELP.md
+
+# --- Java/Maven/Gradle common ---
+**/target/
+**/*.class
+**/*.jar
+**/*.war
+**/*.ear
+!**/gradle-wrapper.jar
