@@ -23,4 +23,9 @@ public class ProductController {
     public Product getProductById(@PathVariable Long id) {
         return productRepository.findById(id).orElse(null);
     }
+
+    @PostMapping
+    public Product createProduct(@RequestBody Product product) {
+        return productRepository.save(product);
+    }
 }
