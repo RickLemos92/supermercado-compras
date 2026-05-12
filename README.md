@@ -9,6 +9,7 @@ Um sistema de mercado moderno e intuitivo, desenvolvido com uma arquitetura full
 ## 🚀 Tecnologias Utilizadas
 
 ### **Front-end**
+
 - **Framework:** [Vue.js 3](https://vuejs.org/) (Composition API)
 - **Build Tool:** [Vite](https://vitejs.dev/)
 - **Estado:** [Pinia](https://pinia.vuejs.org/)
@@ -18,6 +19,7 @@ Um sistema de mercado moderno e intuitivo, desenvolvido com uma arquitetura full
 - **Recursos:** Busca por voz via Web Speech API
 
 ### **Back-end**
+
 - **Linguagem:** [Java 25](https://openjdk.org/)
 - **Framework:** [Spring Boot 3.4+](https://spring.io/projects/spring-boot)
 - **Persistência:** Spring Data JPA / Hibernate
@@ -26,12 +28,14 @@ Um sistema de mercado moderno e intuitivo, desenvolvido com uma arquitetura full
 - **Utilitários:** Lombok & Bean Validation
 
 ### **Infraestrutura**
+
 - **Docker** & **Docker Compose**
 - **Nginx** (Servidor de arquivos estáticos)
 
-## 🏗️ Arquitetura Profissional (Nível Sênior)
+## 🏗️ Arquitetura Profissional
 
 O projeto foi recentemente refatorado para seguir padrões de mercado de alto nível:
+
 - **Service Layer**: Toda a lógica de negócio está isolada em serviços, desacoplando os controladores.
 - **DTOs (Data Transfer Objects)**: Uso de **Java Records** para contratos de API limpos e seguros.
 - **Global Exception Handling**: Tratamento de erros centralizado com respostas JSON padronizadas.
@@ -44,16 +48,19 @@ O projeto foi recentemente refatorado para seguir padrões de mercado de alto n�
 Certifique-se de ter o **Docker** e o **Docker Compose** instalados em sua máquina.
 
 1. Clone o repositório:
+
    ```bash
    git clone https://github.com/RickLemos92/supermercado-compras.git
    ```
 
 2. Navegue até a pasta raiz do projeto:
+
    ```bash
    cd supermercado-compras
    ```
 
 3. Suba os containers:
+
    ```bash
    docker compose up --build -d
    ```
@@ -73,4 +80,3 @@ Certifique-se de ter o **Docker** e o **Docker Compose** instalados em sua máqu
 ---
 
 Desenvolvido por [RickLemos92](https://github.com/RickLemos92) com ❤️ para facilitar a gestão de mercados.
-
