@@ -29,14 +29,13 @@ Um sistema de mercado moderno e intuitivo, desenvolvido com uma arquitetura full
 - **Docker** & **Docker Compose**
 - **Nginx** (Servidor de arquivos estáticos)
 
----
+## 🏗️ Arquitetura Profissional (Nível Sênior)
 
-## ✨ Principais Funcionalidades
-
-- 🎙️ **Busca por Voz:** Encontre produtos rapidamente apenas falando.
-- 💎 **Interface Premium:** Design elegante com efeitos de vidro (glassmorphism) e responsividade total.
-- 📦 **Gestão de Produtos:** CRUD completo integrado ao banco de dados MySQL.
-- 🐳 **Pronto para Docker:** Inicialização simplificada de todo o ambiente (DB, Backend e Frontend).
+O projeto foi recentemente refatorado para seguir padrões de mercado de alto nível:
+- **Service Layer**: Toda a lógica de negócio está isolada em serviços, desacoplando os controladores.
+- **DTOs (Data Transfer Objects)**: Uso de **Java Records** para contratos de API limpos e seguros.
+- **Global Exception Handling**: Tratamento de erros centralizado com respostas JSON padronizadas.
+- **API Client Abstraction**: Frontend utiliza uma camada de serviços e cliente Axios centralizado.
 
 ---
 
@@ -46,30 +45,32 @@ Certifique-se de ter o **Docker** e o **Docker Compose** instalados em sua máqu
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
+   git clone https://github.com/RickLemos92/supermercado-compras.git
    ```
 
 2. Navegue até a pasta raiz do projeto:
    ```bash
-   cd Mercado
+   cd supermercado-compras
    ```
 
 3. Suba os containers:
    ```bash
-   docker compose up --build
+   docker compose up --build -d
    ```
 
 4. Acesse as aplicações:
    - **Frontend:** [http://localhost:80](http://localhost:80)
-   - **Backend API:** [http://localhost:8080](http://localhost:8080)
+   - **Backend API:** [http://localhost:8080/api/products](http://localhost:8080/api/products)
 
 ---
 
 ## 📂 Estrutura do Projeto
 
-- `/frontend`: Aplicação Vue.js 3.
-- `/backend`: API Spring Boot.
-- `docker-compose.yml`: Orquestração dos serviços (App + DB).
+- `/frontend`: Aplicação Vue.js 3 com Composition API e Services.
+- `/backend`: API Spring Boot 3.4+ com Java 25 e arquitetura em camadas (DTO, Service, Controller).
+- `docker-compose.yml`: Orquestração dos serviços (App + DB MySQL).
 
 ---
-Desenvolvido com ❤️ para facilitar a gestão de mercados.
+
+Desenvolvido por [RickLemos92](https://github.com/RickLemos92) com ❤️ para facilitar a gestão de mercados.
+
