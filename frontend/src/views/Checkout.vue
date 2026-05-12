@@ -56,7 +56,7 @@
 <script setup>
 import { useCartStore } from '../stores/cart'
 import { useRouter } from 'vue-router'
-import axios from 'axios'
+import { orderService } from '../services/orderService'
 
 const cartStore = useCartStore()
 const router = useRouter()
@@ -74,7 +74,7 @@ const submitOrder = async () => {
       }))
     }
     
-    await axios.post('http://localhost:8080/api/orders', orderData)
+    await orderService.create(orderData)
     
     alert('Pedido realizado com sucesso!')
     cartStore.clearCart()

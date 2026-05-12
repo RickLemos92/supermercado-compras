@@ -44,8 +44,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from 'vue'
-import axios from 'axios'
+import { productService } from '../services/productService'
 import ProductCard from '../components/ProductCard.vue'
 import { useCartStore } from '../stores/cart'
 
@@ -64,8 +63,7 @@ const filteredProducts = computed(() => {
 
 onMounted(async () => {
   try {
-    const response = await axios.get('http://localhost:8080/api/products')
-    products.value = response.data
+    products.value = await productService.getAll()
   } catch (err) {
     console.error("Failed to fetch products:", err)
     error.value = true

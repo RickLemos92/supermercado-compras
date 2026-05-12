@@ -46,8 +46,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import axios from 'axios'
+import { productService } from '../services/productService'
 
 const loading = ref(false)
 const message = ref('')
@@ -65,7 +64,7 @@ const addProduct = async () => {
   loading.value = true
   message.value = ''
   try {
-    await axios.post('http://localhost:8080/api/products', newProduct.value)
+    await productService.create(newProduct.value)
     message.value = 'Produto adicionado com sucesso!'
     isError.value = false
     // Reset form
@@ -78,7 +77,7 @@ const addProduct = async () => {
     }
   } catch (err) {
     console.error("Erro ao adicionar produto:", err)
-    message.value = 'Erro ao adicionar produto. Verifique a conexão.'
+    message.value = 'Erro ao adicionar produto. Verifique os campos.'
     isError.value = true
   } finally {
     loading.value = false
